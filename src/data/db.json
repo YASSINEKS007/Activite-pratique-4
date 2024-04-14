@@ -1,0 +1,52 @@
+{
+  "products": [
+    {
+      "id": "2",
+      "name": "Printer A",
+      "price": 2300,
+      "checked": true
+    },
+    {
+      "id": "b500",
+      "name": "laptop",
+      "price": "12300",
+      "checked": true
+    },
+    {
+      "id": "93bf",
+      "name": "PS5",
+      "price": "5500",
+      "checked": true
+    },
+    {
+      "id": "e0ef",
+      "name": "PS5",
+      "price": "5500",
+      "checked": true
+    },
+    {
+      "name": "PS2",
+      "price": "800",
+      "checked": false,
+      "id": "i2VQUwx"
+    },
+    {
+      "name": "PS3",
+      "price": "800",
+      "checked": false,
+      "id": "aqqPx1-"
+    },
+    {
+      "name": "PS4",
+      "price": "1500",
+      "checked": false,
+      "id": "PF53zgl"
+    },
+    {
+      "name": "Product",
+      "price": "12300",
+      "checked": true,
+      "id": "_sOodOF"
+    }
+  ]
+}
