@@ -1,6 +1,3 @@
-
-  <h1>Application de gestion de produits Angular</h1>
-
 <body>
   <h1>Application de gestion de produits Angular</h1>
 
