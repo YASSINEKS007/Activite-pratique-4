@@ -1,4 +1,31 @@
 {
+  "users": [
+    {
+      "id": "user1",
+      "password": "1234",
+      "roles": [
+        "USER"
+      ],
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzZXIxIiwic3ViIjoiMTIzNDU2Nzg5MCIsIm5hbWUiOiJKb2huIERvZSIsImlhdCI6MTUxNjIzOTAyMiwicm9sZXMiOlsiVVNFUiJdfQ.qTzmUzxeoI_8xB3NGtRqLW6DE6Y_62nJxTKVKSNOY5Y"
+    },
+    {
+      "id": "user2",
+      "password": "1234",
+      "roles": [
+        "USER"
+      ],
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzZXIxIiwic3ViIjoiMTIzNDU2Nzg5MCIsIm5hbWUiOiJKb2huIERvZSIsImlhdCI6MTUxNjIzOTAyMiwicm9sZXMiOlsiVVNFUiJdfQ.qTzmUzxeoI_8xB3NGtRqLW6DE6Y_62nJxTKVKSNOY5Y"
+    },
+    {
+      "id": "admin",
+      "password": "1234",
+      "roles": [
+        "USER",
+        "ADMIN"
+      ],
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwic3ViIjoiMTIzNDU2Nzg5MCIsIm5hbWUiOiJKb2huIERvZSIsImlhdCI6MTUxNjIzOTAyMiwicm9sZXMiOlsiVVNFUiIsIkFETUlOIl19.XcvX6wSlhnDFkR9hQNGKJ7IXwVIexu3Kw3uGinrxL30"
+    }
+  ],
   "products": [
     {
       "id": "2",
@@ -47,6 +74,12 @@
       "price": "12300",
       "checked": true,
       "id": "_sOodOF"
+    },
+    {
+      "name": "PC Gamer",
+      "price": "123 400",
+      "checked": true,
+      "id": "4Dyeqy4"
     }
   ]
 }

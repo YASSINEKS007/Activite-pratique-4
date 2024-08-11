@@ -1,7 +1,6 @@
 import {Component, OnInit} from "@angular/core";
 import {ProductService} from "../services/product.service";
 import {Product} from "../model/product.model";
-import {Observable} from "rxjs";
 import {Router} from "@angular/router";
 import {AppStateService} from "../services/app-state.service";
 
@@ -24,26 +23,42 @@ export class ProductsComponent implements OnInit {
   }
 
   searchProducts() {
+    /*this.appState.setProductState({
+      status: "LOADING"
+    })*/
     this.productService.searchProducts(this.appState.productsState.keyword,
       this.appState.productsState.currentPage,
       this.appState.productsState.pageSize).subscribe({
       next: (resp) => {
-        this.appState.productsState.products = resp.body as Product[];
-        const totalCountHeader = resp.headers.get('x-total-count');
-        const totalProducts = totalCountHeader ? parseInt(totalCountHeader) : 0;
-        this.appState.productsState.totalProducts = totalProducts;
-        console.log("Total Products Header:", totalCountHeader);
-        console.log("Total Products:", totalProducts);
-        this.appState.productsState.totalPages = Math.floor(totalProducts / this.appState.productsState.pageSize);
+        //this.appState.productsState.products = resp.body as Product[];
+        let products = resp.body as Product[];
+        let totalCountHeader = resp.headers.get('x-total-count');
+        let totalProducts = totalCountHeader ? parseInt(totalCountHeader) : 0;
+        //this.appState.productsState.totalProducts = totalProducts;
+
+        let totalPages = Math.floor(totalProducts / this.appState.productsState.pageSize);
         if (totalProducts % this.appState.productsState.pageSize !== 0) {
-          this.appState.productsState.totalPages++;
+          ++totalPages;
         }
+        this.appState.setProductState({
+          products : products,
+          totalProducts: totalProducts,
+          totalPages: totalPages,
+          /*status : "LOADED",
+          errorMessage: null */
+
+
+        })
         console.log("Total Pages:", this.appState.productsState.totalPages);
       },
       error: err => {
         console.log("Error:", err);
+
       }
+
     });
+
+
   }
 
 
@@ -78,6 +93,6 @@ export class ProductsComponent implements OnInit {
   }
 
   handleEdit(product: Product) {
-    this.router.navigateByUrl(`/edit-product/${product.id}`);
+    this.router.navigateByUrl(`/admin/edit-product/${product.id}`);
   }
 }
